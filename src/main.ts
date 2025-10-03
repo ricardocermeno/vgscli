@@ -1,8 +1,10 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+#!/usr/bin/env node
+import { CommandFactory } from 'nest-commander';
+import { ZCliModule } from './cli.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 3000);
+  await CommandFactory.run(ZCliModule, {
+    logger: ['warn', 'error'],
+  });
 }
-bootstrap();
+bootstrap().catch(console.error);
