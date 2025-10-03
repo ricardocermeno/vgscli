@@ -15,7 +15,7 @@ interface VGSAliasCommandOptions {
 }
 
 @Command({
-  name: 'vgs-alias',
+  name: 'alias',
   description: 'Manage VGS aliases for tokenization',
   arguments: '[action]',
   argsDescription: {

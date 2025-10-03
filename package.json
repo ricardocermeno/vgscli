@@ -1,10 +1,29 @@
 {
   "name": "vgscli",
   "version": "0.0.1",
-  "description": "",
+  "description": "A command-line tool for managing VGS aliases for tokenization",
   "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "private": false,
+  "license": "MIT",
+  "main": "dist/main.js",
+  "bin": {
+    "vgscli": "dist/main.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "keywords": [
+    "vgs",
+    "tokenization",
+    "alias",
+    "cli",
+    "security"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardocermeno/vgscli.git"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
